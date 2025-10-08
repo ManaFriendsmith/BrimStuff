@@ -1,0 +1,92 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+  Compatibility:
+    - Updated for compatibility with Factorio 2.0 and Space Age.
+  Graphics:
+    - Greenhouses will no longer stay lit up while idle.
+    - Greenhouses use recipe tints.
+  Features:
+    - [space-age] Added panspermia asteroids, to obtain spoilage in space. This is part of the production chain for thruster oxidizer, but may also be useful for some other chemical things if you want to do those on space platforms.
+    - [space-age] Greenhouses are now mandatory in space age. Added unique greenhouse recipes that can be performed on Gleba (requires agricultural science), Vulcanus (requires agri + metal), and Fulgora (requires agri + electro).
+    - Added new intermediates to Maximal mode: Spring and [space-age] differential girdlespring.
+  Changes:
+    - Broke out prototype-manipulation functions into a separate mod, so I don't need to update every single mod whenever there is inevitably a small bug.
+    - Difficulty selection is now handled by a single option in pf-functions. The options are now Minimal (comparable to old easy mode), Moderate (comparable to old hard mode, some things are softened when used with Space Age to expedite getting off Nauvis), and Maximal (lots of extra middle fingers to you and your plans.)
+    - Moved depleted acid to Them Thar Hills from BrimStuff.
+  Balancing:
+    - Chemical waste is now always enabled. (It is sort of the central mechanic; the mod isn't much without it.)
+    - Greenhouses have 2 module slots (up from 1)
+    - Toluene and gunpowder are no longer in minimal difficulty.
+    - Lots of minor recipe tweaks across the board.
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+  Balancing:
+    - (vtk-deep-core-mining) Greatly reduced sulfur yield from deep core ore sorting.
+    - (vtk-deep-core-mining) Greatly increased sulfuric acid cost of deep core ore refinement; added nitric acid cost and waste byproduct.
+    - This is to balance out the greatly increased availability of sulfur - sulfur ore patches are wide and shallow and leave behind a lot of infinite deposits.
+    - When Them Thar Hills is not installed, increased the amount of nitric acid needed for explosives (x3) and rocket fuel (x2 with Lunar Landings, x3 otherwise)
+    - This is sort of a bandaid solution to nitric acid being needed in very low amounts if you aren't refining gold. I will do a much more thorough balance pass after Space Age, as many things will need reworking.
+    - (LL) Reduced water cost of potassium nitrate, early nitric acid, rubber, and (TTH) depleted acid treatment.
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Bugfixes:
+    - (LL, !brass) Liquid rocket fuel no longer costs rubber or gaskets.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Bugfixes:
+    - Plastic-with-toluene can use productivity modules. For real this time.
+    - Burner chemical plant will no longer buffer excessive fluid outputs.
+  Compatibility:
+    - Support for Lunar Landings added.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Changes:
+    - Advanced Polymer Synthesis recipes can use productivity modules.
+  Bugfixes:
+    - Fixed potassium nitrate having a broken locale key.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Bugfixes:
+    - Fixed startup error with Them Thar Hills when greenhouses are disabled.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Changes:
+    - Renamed saltpeter to potassium nitrate for consistency across translations.
+  Compatibility:
+    - Add support for Icon Badges
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Locale:
+    - Added Spanish locale by Rawkius
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Features:
+    - Added advanced polymer synthesis technology, unlocking alternate recipes for rubber and plastic which use toluene to boost efficiency.
+  Changes:
+    - (Deadlock) Toluene can now be stacked and crated.
+    - Renamed tech folder to technology.
+  Locale:
+    - Added description to pollution nodule indicating it can be shipped by delivery cannon.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Changes:
+    - (TTH) Added depleted acid byproduct to new alternate integrated circuit recipe.
+    - Renamed items folder to icons, like every other mod.
+  Bugfixes:
+    - Fixed incorrect condition for adding toluene byproduct to phenol from oil recipe.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.
