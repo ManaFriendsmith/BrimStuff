@@ -1,4 +1,5 @@
 local util = require("util")
+local item_sounds = require("__base__/prototypes/item_sounds")
 
 if not (settings.startup["brimstuff-greenhouse"].value or mods["space-age"]) then
   return
@@ -188,6 +189,9 @@ data:extend({
     subgroup = mods["space-age"] and "agriculture" or "production-machine",
     place_result = "brimstuff-greenhouse",
     order = mods["space-age"] and "a" or "cz",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 50,
     weight = 20 * kg
   },
