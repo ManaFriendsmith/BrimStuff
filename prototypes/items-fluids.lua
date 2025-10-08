@@ -88,7 +88,7 @@ if mods["space-age"] then
             inventory_move_sound = item_sounds.wood_inventory_move,
             pick_sound = item_sounds.wood_inventory_pickup,
             drop_sound = item_sounds.wood_inventory_move,
-            stack_size = 100,
+            stack_size = 200,
             default_import_location = "vulcanus",
             weight = 1*kg
         },
@@ -102,11 +102,14 @@ if mods["space-age"] then
             inventory_move_sound = item_sounds.wood_inventory_move,
             pick_sound = item_sounds.wood_inventory_pickup,
             drop_sound = item_sounds.wood_inventory_move,
-            stack_size = 100,
+            stack_size = 200,
             default_import_location = "gleba",
-            weight = 1*kg
+            weight = 0.25*kg
         }
     })
+
+    data.raw.item["carbofungus-spore"].spoil_ticks = 2 * minute
+    data.raw.item["carbofungus-spore"].spoil_result = "carbon"
 end
 
 if misc.difficulty == 1 then
@@ -237,7 +240,4 @@ if mods["space-age"] then
             visualization_color = {0.6, 0.2, 1, 1}
         }
     })
-
-    data.raw.item["carbofungus-spore"].spoil_ticks = 2 * minute
-    data.raw.item["carbofungus-spore"].spoil_result = "carbon"
 end
