@@ -138,6 +138,14 @@ end
 
 --GLEBA
 
+data.raw.recipe["nutrients-from-spoilage"].surface_conditions = {
+    {
+        property = "atmospheric-toxins",
+        max = 20
+    }
+}
+tm.AddUnlock("agricultural-science-pack", "toxic-environment-nutrients-bootstrap")
+
 if misc.difficulty > 1 then
     tm.AddUnlock("plastic-bar-productivity", {type="change-recipe-productivity", recipe="plastic-from-toluene", change=0.1})
     tm.AddPrerequisite("plastic-bar-productivity", "advanced-polymer-synthesis")

@@ -21,6 +21,14 @@ script.on_configuration_changed(
         end
       end
     end
+
+    if script.active_mods["space-age"] then
+      for k, surf in pairs(game.surfaces) do
+        if surf.platform then
+          surf.set_property("atmospheric-toxins", 0)
+        end
+      end
+    end
   end
 )
 

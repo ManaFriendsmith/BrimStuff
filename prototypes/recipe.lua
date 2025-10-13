@@ -391,6 +391,37 @@ if mods["space-age"] then
         },
         {
             type = "recipe",
+            name = "toxic-environment-nutrients-bootstrap",
+            icons = {
+                {
+                    icon = "__space-age__/graphics/icons/nutrients-from-spoilage.png",
+                    icon_size = 64,
+                    icon_mipmaps = 4
+                },
+                {
+                    icon = "__space-age__/graphics/icons/bioflux.png",
+                    icon_size = 64,
+                    icon_mipmaps = 4,
+                    scale = 0.25
+                }
+            },
+            subgroup = "agriculture-processes",
+            order = "c[nutrients]-c[nutrients-from-spoilage]-alt",
+            category = "crafting",
+            ingredients = {
+                {type="item", name="spoilage", amount=10},
+                {type="item", name="bioflux", amount=1},
+            },
+            results = {
+                {type="item", name="nutrients", amount=5, percent_spoiled = 0.25},
+            },
+            energy_required = 5,
+            allow_productivity = true,
+            allow_decomposition = false,
+            enabled = false
+        },
+        {
+            type = "recipe",
             name = "spoilage-dessiccation",
             category = "organic-or-basic-chemistry",
             icons = {
