@@ -1342,7 +1342,7 @@ if mods["space-age"] then
             ingredients = {
                 {type="item", name="bioflux", amount=2},
                 {type="item", name="toluene", amount=2},
-                {type="item", name="nutrients", amount=5},
+                {type="item", name="nutrients", amount=20},
                 {type="fluid", name="fertilizer-slurry", amount=200},
             },
             results = {
@@ -1410,9 +1410,9 @@ if mods["space-age"] then
                 subgroup = "original-dint",
                 order = "w",
                 ingredients = {
-                    {type="fluid", name="chemical-waste", amount=1000, fluidbox_multiplier=10},
-                    {type="item", name="stem-cells", amount=1},
-                    {type="fluid", name="growth-serum", amount=5}
+                    {type="fluid", name="chemical-waste", amount=10000, fluidbox_multiplier=10},
+                    {type="item", name="stem-cells", amount=20},
+                    {type="fluid", name="growth-serum", amount=500}
                 },
                 results = {
                     {type="item", name="mutagenic-sludge", amount=2}
@@ -1439,9 +1439,10 @@ if mods["space-age"] then
                     {type="item", name="mutagenic-sludge", amount=1, ignored_by_stats=1}
                 },
                 results = {
-                    {type="item", name="mutagenic-sludge", amount=1, probability=0.6, ignored_by_stats=1},
-                    {type="fluid", name="chemical-waste", amount=150},
-                    {type="item", name="toluene", amount=1}
+                    {type="item", name="mutagenic-sludge", amount=1, probability=0.85, ignored_by_stats=1, ignored_by_productivity=1},
+                    {type="fluid", name="chemical-waste", amount=250},
+                    {type="item", name="toluene", amount=1, probability=0.33},
+                    {type="item", name="sulfur", amount=1, probability=0.33}
                 },
                 energy_required = 8,
                 allow_productivity = true,

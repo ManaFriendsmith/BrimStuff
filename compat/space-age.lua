@@ -179,6 +179,10 @@ rm.RemoveIngredient("wood-processing", "wood", 1)
 data.raw.plant["tree-plant"].growth_ticks = 60 * 60 * 2
 
 if misc.difficulty == 3 then
+    if mods["IfNickel"] then
+        rm.AddIngredient("bacterium-extraction-from-sludge", "growth-serum", 5)
+    end
+
     tm.AddPrerequisite("overgrowth-soil", "hydroponics")
     tm.RemovePrerequisite("overgrowth-soil", "utility-science-pack")
     rm.ReplaceIngredientProportional("overgrowth-yumako-soil", "water", "growth-serum")
