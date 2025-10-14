@@ -1410,12 +1410,12 @@ if mods["space-age"] then
                 subgroup = "original-dint",
                 order = "w",
                 ingredients = {
-                    {type="fluid", name="chemical-waste", amount=10000, fluidbox_multiplier=10},
-                    {type="item", name="stem-cells", amount=20},
-                    {type="fluid", name="growth-serum", amount=500}
+                    {type="fluid", name="chemical-waste", amount=5000, fluidbox_multiplier=10},
+                    {type="item", name="stem-cells", amount=10},
+                    {type="fluid", name="growth-serum", amount=250}
                 },
                 results = {
-                    {type="item", name="mutagenic-sludge", amount=2}
+                    {type="item", name="mutagenic-sludge", amount=1}
                 },
                 energy_required = 8,
                 allow_productivity = true,
