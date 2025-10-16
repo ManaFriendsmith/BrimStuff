@@ -855,6 +855,36 @@ if mods["space-age"] then
         },
         {
             type = "recipe",
+            name = "metalcelium-cryoponics",
+            icon = "__space-age__/graphics/icons/lithium-iceberg-huge.png",
+            icon_size = 64,
+            category = "brimstuff-botany",
+            subgroup = "brimstuff-botany",
+            order = "gd",
+            ingredients = {
+                {type="item", name="metalcelium-spore", amount=1},
+                {type="fluid", name="ammoniacal-solution", amount=200}
+            },
+            results = {
+                {type="item", name="spoilage", amount=1},
+                {type="fluid", name="lithium-brine", amount=1}
+            },
+            surface_conditions = {
+                {
+                    property = "pressure",
+                    min = 300,
+                    max = 300
+                }
+            },
+            energy_required = 5,
+            allow_productivity = true,
+            enabled = false,
+            crafting_machine_tint = {
+                primary = {0.9, 0.9, 0.9, 1}
+            }
+        },
+        {
+            type = "recipe",
             name = "solid-fuel-disposal",
             icons = {
               {
