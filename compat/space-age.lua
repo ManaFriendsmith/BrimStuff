@@ -181,6 +181,7 @@ data.raw.plant["tree-plant"].growth_ticks = 60 * 60 * 2
 if misc.difficulty == 3 then
     if mods["IfNickel"] then
         rm.AddIngredient("bacterium-extraction-from-sludge", "growth-serum", 5)
+        tm.AddUnlock("tissue-cultivation", "growth-serum", "-bacterium-extraction-from-sludge")
     end
 
     tm.AddPrerequisite("overgrowth-soil", "hydroponics")
