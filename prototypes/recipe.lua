@@ -1,6 +1,78 @@
 local misc = require("__pf-functions__/misc")
 local rm = require("__pf-functions__/recipe-manipulation")
 
+if mods["Paracelsin"] then
+    if misc.difficulty == 1 then
+        data:extend({
+            {
+                type = "recipe",
+                name = "paracelsian-synthetic-rubber",
+                category = "organic-or-basic-chemistry",
+                additional_categories = {"electrochemistry"},
+                ingredients = {
+                    {type="item", name="solid-fuel", amount=5},
+                    {type="item", name="sulfur", amount=1},
+                    {type="fluid", name="nitric-acid", amount=10}
+                },
+                results = {
+                    {type="item", name="rubber", amount=1},
+                    {type="fluid", name="chemical-waste", amount=15}
+                },
+                main_product = "rubber",
+                energy_required = 1,
+                allow_productivity = true,
+                enabled = false,
+                crafting_machine_tint = {
+                    primary = {1, 0.55, 0.55, 1},
+                    secondary = {0.8, 0.4, 0.1, 1},
+                    tertiary = {0, 0, 0, 0.5},
+                    quaternary = {1, 1, 1, 1}
+                }
+            }
+        })
+    else
+        data:extend({
+            {
+                type = "recipe",
+                name = "paracelsian-synthetic-toluene",
+                icons = {
+                    {
+                        icon = "__BrimStuff__/graphics/icons/toluene.png",
+                        icon_size = 64
+                    },
+                    {
+                        icon = "__space-age__/graphics/icons/carbon.png",
+                        icon_size = 64,
+                        scale = 0.25,
+                        shift = {-8, -8}
+                    }
+                },
+                category = "organic-or-basic-chemistry",
+                additional_categories = {"electrochemistry"},
+                ingredients = {
+                    {type="item", name="carbon", amount=2},
+                    {type="item", name="vaterite", amount=2},
+                    {type="fluid", name="nitric-acid", amount=10},
+                },
+                results = {
+                    {type="item", name="toluene", amount=1},
+                    {type="fluid", name="chemical-waste", amount=15}
+                },
+                main_product = "toluene",
+                energy_required = 2,
+                allow_productivity = true,
+                enabled = false,
+                crafting_machine_tint = {
+                    primary = {0.15, 0.15, 0.15, 1},
+                    secondary = {1, 1, 1, 1},
+                    tertiary = {1, 1, 0.7, 1},
+                    quaternary = {1, 1, 1, 1}
+                }
+            }
+        })
+    end
+end
+
 data:extend({
     {
         type = "recipe-category",

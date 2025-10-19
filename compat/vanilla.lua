@@ -68,6 +68,7 @@ if misc.difficulty > 1 then
     rm.AddIngredient("rocket-fuel-from-jelly", "airtight-seal", 1)
     rm.AddIngredient("ammonia-rocket-fuel", "airtight-seal", 1)
     rm.AddIngredient("maraxsis-hydrolox-rocket-fuel", "airtight-seal", 1)
+    rm.AddIngredient("nitric-acid-rocket-fuel", "airtight-seal", 1)
 end
 
 if mods["BrassTacks"] and misc.difficulty == 3 then
