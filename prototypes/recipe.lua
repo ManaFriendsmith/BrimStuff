@@ -1541,8 +1541,8 @@ if mods["space-age"] then
                     {type="item", name="mutagenic-sludge", amount=1, ignored_by_stats=1}
                 },
                 results = {
-                    {type="item", name="mutagenic-sludge", amount=1, probability=0.85, ignored_by_stats=1, ignored_by_productivity=1},
-                    {type="fluid", name="chemical-waste", amount=250},
+                    {type="item", name="mutagenic-sludge", amount=1, probability=0.66, ignored_by_stats=1, ignored_by_productivity=1},
+                    {type="fluid", name="chemical-waste", amount=150},
                     {type="item", name="toluene", amount=1, probability=0.33},
                     {type="item", name="sulfur", amount=1, probability=0.33}
                 },
