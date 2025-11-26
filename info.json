@@ -6,5 +6,5 @@
   "homepage": "",
   "description": "Adds minable sulfur, burner chemical plant, gunpowder and rubber. Changes how sulfur is obtained from oil. Optionally adds chemical waste reprocessing and greenhouses.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacks", "? IfNickel", "? ThemTharHills", "? maraxsis", "? Paracelsin"]
+  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacks", "? IfNickel", "? ThemTharHills", "? maraxsis", "? Paracelsin", "? castra"]
 }

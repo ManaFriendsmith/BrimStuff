@@ -1041,6 +1041,94 @@ if mods["space-age"] then
         rm.AddProduct("chemical-waste-leaching", "nickel-ore", 2)
     end
 
+    if mods["castra"] then
+        data:extend({
+            {
+                type = "recipe",
+                name = "rubber-gunpowder",
+                icons = {
+                    {
+                        icon = "__BrimStuff__/graphics/icons/rubber.png",
+                        icon_size = 64
+                    },
+                    {
+                        icon = "__castra__/graphics/icons/fluid/hydrogen-sulfide.png",
+                        icon_size = 64,
+                        shift = {-8, -8},
+                        scale = 0.25
+                    }
+                },
+                category = "organic-or-basic-chemistry",
+                subgroup = "castra-processes",
+                order = "gc",
+                ingredients = {
+                    {type="fluid", name="hydrogen-sulfide", amount=30},
+                    {type="item", name="gunpowder", amount=2},
+                    {type="item", name="carbon", amount=1}
+                },
+                results = {
+                    {type="item", name="rubber", amount=2},
+                    {type="fluid", name="chemical-waste", amount=35}
+                },
+                main_product = "rubber",
+                surface_conditions = {
+                    {
+                        property = "pressure",
+                        min = 1254,
+                        max = 1254
+                    }
+                },
+                energy_required = 1,
+                allow_productivity = true,
+                enabled = false,
+                crafting_machine_tint = {
+                    primary = {1, 0.55, 0.55, 1},
+                    secondary = {1, 1, 1, 1},
+                    tertiary = {0, 0, 0, 0.5},
+                    quaternary = {1, 1, 1, 1}
+                }
+            },
+            {
+                type = "recipe",
+                name = "gunpowder-disposal",
+                icons = {
+                {
+                    icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+                    icon_size = 64,
+                    icon_mipmaps = 4,
+                },
+                {
+                    icon = misc.difficulty == 1 and "__castra__/graphics/icons/gunpowder.png" or "__BrimStuff__/graphics/icons/gunpowder.png",
+                    icon_size = 64,
+                    icon_mipmaps = 4,
+                    scale = 0.33
+                }
+                },
+                category = "chemistry",
+                subgroup = "fluid-recipes",
+                order = "c[oil-products]-ca",
+                energy_required = 1,
+                ingredients = {
+                    {type="fluid", name="sulfuric-acid", amount=5},
+                    {type="fluid", name="petroleum-gas", amount=5},
+                    {type="item", name="gunpowder", amount=10}
+                },
+                results = {
+                    {type="fluid", name="chemical-waste", amount=75}
+                },
+                energy_required = 1,
+                allow_productivity = true,
+                enabled = false,
+                emissions_multiplier = 5,
+                crafting_machine_tint = {
+                    primary = {0.5, 0, 1, 1},
+                    secondary = {1, 0.5, 0, 1},
+                    tertiary = {0.5, 0, 1, 1},
+                    quaternary = {1, 0.5, 0, 1}
+                }
+            }
+        })
+    end
 end
 
 if tune_up_data then

@@ -38,3 +38,54 @@ if mods["Paracelsin"] then
     rm.AddRecipeCategory("gunpowder", "electrochemistry")
     rm.AddRecipeCategory("gunpowder-in-space", "electrochemistry")
 end
+
+if mods["castra"] then
+    if misc.difficulty > 1 and not data.raw.item["ambifacient-lunar-waneshaft"] then
+        rm.ReplaceIngredientProportional("engine-unit-gunpowder", "iron-gear-wheel", "drive-belt")
+    end
+
+    if misc.difficulty == 3 then
+        rm.AddIngredient("rocket-fuel-sulfur", "airtight-seal")
+    end
+
+    if not mods["ThemTharHills"] then
+        rm.AddIngredient("nickel-sulfide-reduction", "nitric-acid", 25)
+        rm.AddProduct("nickel-sulfide-reduction", "chemical-waste", 25)
+    end
+
+    if misc.difficulty > 1 then
+        --gunpowder has already replaced coal in the default recipe, delete the duplicate
+        tm.RemoveUnlock("gunpowder-processing", "grenade-gunpowder")
+        tm.RemoveUnlock("explosive-ammo-productivity", {type="change-recipe-productivity", recipe="grenade-gunpowder"})
+        data.raw.recipe["grenade-gunpowder"] = nil
+
+        rm.AddIngredient("firearm-magazine-nickel", "gunpowder", 1)
+
+        --this is arguably too mean. however it is weird to "tier up" explosives so easily.
+        --nothing on castra needs TNT in bulk. if you want local cliff explosive production or something you can feed it off the toluene from oil cracking
+        --plus explosives being harder to get here makes the explosives productivity research more compelling
+        tm.RemoveUnlock("gunpowder-processing", "explosives-gunpowder")
+        data.raw.recipe["explosives-gunpowder"] = nil
+    else
+        rm.AddProduct("explosives-gunpowder", "chemical-waste", 20)
+    end
+
+    tm.AddUnlock("gunpowder-processing", "rubber-gunpowder")
+    tm.AddUnlock("gunpowder-processing", "gunpowder-disposal")
+
+    if mods["BrassTacks"] then
+        rm.AddProduct("custom-ancient-military-wreckage-recycling", {type="item", name="rubber", amount=1, probability=0.1})
+    end
+
+    if mods["BrassTacks"] and misc.difficulty == 3 then
+        --makes more sense to do electrolysis in an electroplating machine than a burner chem plant
+        rm.AddRecipeCategory("hydrogen-sulfide-electrolysis", "electroplating")
+    else
+        rm.AddRecipeCategory("hydrogen-sulfide-electrolysis", "basic-chemistry")
+    end
+
+    rm.AddProduct("holmium-catalyzing", "chemical-waste", 5)
+    rm.AddProduct("hydrogen-sulfide-carbon-extraction", "chemical-waste", 5)
+
+    rm.AddProduct("gunpowder-carbon", "potassium-nitrate", 1)
+end
