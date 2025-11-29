@@ -409,7 +409,7 @@ if misc.difficulty > 1 then
                     recipe = "plastic-from-toluene"
                 }
             },
-            prerequisites = {mods["space-age"] and "production-science-pack" or "agricultural-science-pack"},
+            prerequisites = {mods["space-age"] and "agricultural-science-pack" or "production-science-pack"},
             unit = {
                 count = mods["space-age"] and 500 or 200,
                 time = 30,
@@ -520,7 +520,7 @@ if misc.difficulty > 1 then
     end
 end
 
-if misc.difficulty == 3 and mods["IfNickel"] then
+if misc.difficulty == 3 and mods["IfNickel"] and mods["space-age"] then
     data:extend({
         {
             type = "technology",

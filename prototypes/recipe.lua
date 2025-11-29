@@ -1223,12 +1223,12 @@ data:extend({
             {type="item", name="gunpowder", amount=3},
             {type="fluid", name="chemical-waste", amount=60}
         },
-        surface_conditions = {
+        surface_conditions = mods["space-age"] and {
             {
                 property = "pressure",
                 min = 1
             }
-        },
+        } or nil,
         main_product = "gunpowder",
         energy_required = 3,
         allow_productivity = true,

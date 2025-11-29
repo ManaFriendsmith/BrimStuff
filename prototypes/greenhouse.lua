@@ -232,12 +232,12 @@ data:extend({
     },
     enabled = false,
     allow_productivity = true,
-    surface_conditions = {
+    surface_conditions = mods["space-age"] and {
       {
         property = "pressure",
         min = 1000,
         max = 2000
-      }
+      } or nil
     },
     crafting_machine_tint = {
       primary = {0, 1, 0, 1}
