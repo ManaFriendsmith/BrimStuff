@@ -1131,6 +1131,50 @@ if mods["space-age"] then
     end
 end
 
+if mods["LunarLandings"] then
+    data:extend({
+        {
+        type = "recipe",
+        name = "astral-waste-treatment",
+        icons = {
+          {
+            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+          },
+          {
+            icon = "__LunarLandings__/graphics/fluid/astroflux.png",
+            icon_size = 64,
+            scale = 0.25,
+            shift = {-8, -8}
+          }
+        },
+        category = "chemistry",
+        subgroup = "fluid-recipes",
+        order = "c[oil-products]-ca",
+        main_product = "",
+        enabled = false,
+        energy_required = 2,
+        allow_decomposition = false,
+        allow_productivity = true,
+        ingredients = {
+            {type="fluid", name="chemical-waste", amount=600},
+            {type="fluid", name="ll-astroflux", amount=10},
+            {type="item", name="coal", amount=1}
+        },
+        results = {
+            {type="fluid", name="petroleum-gas", amount=100}
+        },
+        crafting_machine_tint = {
+          primary = {0.5, 0, 1, 1},
+          secondary = {1, 0, 1, 1},
+          tertiary = {0.75, 0.5, 1, 1},
+          quaternary = {0.9, 0.8, 1, 1}
+        }
+      }
+    })
+end
+
 if tune_up_data then
    tune_up_data.recipes["potassium-nitrate"] = {
     category = "purification",
@@ -1521,6 +1565,30 @@ data:extend({
 
 rm.ReplaceIngredientProportional("drive-belt", "iron-stick", "spring")
 
+if mods["space-age"] or mods["LunarLandings"] then
+    data:extend({
+        {
+            type = "recipe",
+            name = "differential-girdlespring",
+            category = "advanced-crafting",
+            subgroup = "intermediate-product",
+            ingredients = {
+                {type="item", name="spring", amount=8},
+                {type="item", name="rubber", amount=8},
+                {type="item", name="iron-gear-wheel", amount=3},
+                {type="item", name="steel-plate", amount=1}
+            },
+            results = {
+                {type="item", name="differential-girdlespring", amount=1}
+            },
+            energy_required = 8,
+            lasermill_dlc = {helium = -1},
+            allow_productivity = true,
+            enabled = false
+        }
+    })
+end
+
 if mods["space-age"] then
     data:extend({
         {
@@ -1549,25 +1617,6 @@ if mods["space-age"] then
                 tertiary = {0, 0, 0, 1},
                 quaternary = {1, 0, 1, 1}
             }
-        },
-        {
-            type = "recipe",
-            name = "differential-girdlespring",
-            category = "advanced-crafting",
-            subgroup = "intermediate-product",
-            ingredients = {
-                {type="item", name="spring", amount=8},
-                {type="item", name="rubber", amount=8},
-                {type="item", name="iron-gear-wheel", amount=3},
-                {type="item", name="steel-plate", amount=1}
-            },
-            results = {
-                {type="item", name="differential-girdlespring", amount=1}
-            },
-            energy_required = 8,
-            lasermill_dlc = {helium = -1},
-            allow_productivity = true,
-            enabled = false
         }
     })
 

@@ -64,7 +64,9 @@ end
 
 rm.ReplaceIngredientProportional("rocket-fuel", "light-oil", "nitric-acid", 2)
 if misc.difficulty > 1 then
-    rm.AddIngredient("rocket-fuel", "airtight-seal", 1)
+    if mods["space-age"] or not mods["LunarLandings"] then
+        rm.AddIngredient("rocket-fuel", "airtight-seal", 1)
+    end
     rm.AddIngredient("rocket-fuel-from-jelly", "airtight-seal", 1)
     rm.AddIngredient("ammonia-rocket-fuel", "airtight-seal", 1)
     rm.AddIngredient("maraxsis-hydrolox-rocket-fuel", "airtight-seal", 1)
@@ -119,6 +121,10 @@ if data.raw.item["differential-girdlespring"] then
             data.raw.technology["electric-engine"].localised_name = {"technology-name.mechanical-engineering"}
             data.raw.technology["electric-engine"].localised_description = {"technology-description.mechanical-engineering"}
         end
+    end
+
+    if data.raw.item["skyseeker-armature"] then
+        rm.AddIngredient("skyseeker-armature", "differential-girdlespring", 2)
     end
 end
 
@@ -233,7 +239,7 @@ if not mods["IfNickel"] then
 end
 
 if misc.difficulty == 3 and mods["elevated-rails"] then
-    if mods["space-age"] then
+    if data.raw.item["differential-girdlespring"] then
         rm.AddIngredient("rail-support", "differential-girdlespring", 1)
         rm.AddIngredient("rail-ramp", "differential-girdlespring", 1)
         if data.raw.item["nitinol-plate"] then
@@ -290,6 +296,9 @@ if misc.difficulty > 1 then
             tm.AddPrerequisite("uranium-mining", "electric-engine")
         end
         rm.AddIngredient("centrifuge", "differential-girdlespring", 10)
+        if (mods["space-age"] or not mods["LunarLandings"]) and not data.raw.item["skyseeker-armature"] then
+            rm.AddIngredient("rocket-silo", "differential-girdlespring", 100)
+        end
     end    
 end
 

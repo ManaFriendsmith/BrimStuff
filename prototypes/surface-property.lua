@@ -23,3 +23,12 @@ data.raw.planet["aquilo"].surface_properties["atmospheric-toxins"] = 29
 if mods["maraxsis"] then
     data.raw.planet["maraxsis"].surface_properties["atmospheric-toxins"] = 5
 end
+if mods["LunarLandings"] then
+    data.raw.planet["luna"].surface_properties["atmospheric-toxins"] = 0
+end
+if mods["castra"] then
+    data.raw.planet["castra"].surface_properties["atmospheric-toxins"] = 6135
+end
+if mods["paracelsin"] then
+    data.raw.planet["castra"].surface_properties["atmospheric-toxins"] = 21
+end

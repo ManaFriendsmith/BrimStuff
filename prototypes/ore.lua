@@ -55,7 +55,7 @@ data:extend({
     type = "autoplace-control",
     category = "resource",
     name = "sulfur",
-    localised_name = {"", (mods["LunarLandings"] and "[virtual-signal=ll-nauvis] " or "") .. "[entity=sulfur] ", {"entity-name.sulfur"}},
+    localised_name = {"", "[entity=sulfur] ", {"entity-name.sulfur"}},
     richness = true,
     order = "a-eb"
   }

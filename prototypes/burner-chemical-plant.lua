@@ -168,6 +168,7 @@ bcp.energy_source =
       }
     }
 bcp.energy_usage = "180kW"
+bcp.ll_surface_conditions = {nauvis=true, luna={plain=false, lowland=false, mountain=false, foundation=true}}
 
 if mods["space-age"] then
   bcp.surface_conditions = {

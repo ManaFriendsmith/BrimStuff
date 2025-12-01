@@ -30,7 +30,6 @@ rm.AddProduct("advanced-thruster-fuel", "chemical-waste", 60)
 rm.AddProduct("advanced-thruster-oxidizer", "chemical-waste", 60)
 
 if misc.difficulty == 3 then
-    rm.AddIngredient("rocket-silo", "differential-girdlespring", 100)
     rm.AddIngredient("cargo-bay", "differential-girdlespring", 1)
     rm.AddIngredient("crusher", "differential-girdlespring", 1)
     rm.AddIngredient("asteroid-collector", "differential-girdlespring", 10)

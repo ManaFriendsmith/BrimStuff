@@ -212,7 +212,7 @@ data:extend({
     }
 })
 
-if mods["space-age"] then
+if mods["space-age"] or mods["LunarLandings"] then
     data:extend({
         {
             type = "item",
@@ -227,6 +227,11 @@ if mods["space-age"] then
             default_import_location = "nauvis",
             weight = 2*kg
         },
+    })
+end
+
+if mods["space-age"] then
+    data:extend({
         {
             type = "fluid",
             name = "growth-serum",

@@ -2,6 +2,33 @@ local rm = require("__pf-functions__/recipe-manipulation")
 local tm = require("__pf-functions__/technology-manipulation")
 local misc = require("__pf-functions__/misc")
 
+if mods["LunarLandings"] then
+    if misc.difficulty > 1 then
+        rm.AddIngredient("ll-oxygen-diffuser", "airtight-seal", 5)
+    end
+
+    local llrs = mods["space-age"] and "ll-rocket-silo-up" or "rocket-silo"
+    if misc.difficulty == 3 then
+        rm.AddIngredient("ll-landing-pad", "differential-girdlespring", 5)
+        rm.AddIngredient("ll-telescope", "differential-girdlespring", 10)
+        rm.AddIngredient("ll-telescope", "differential-girdlespring", 10)
+        rm.AddIngredient("ll-moon-rail-ramp", "differential-girdlespring", 1)
+        rm.AddIngredient("ll-moon-rail-support", "differential-girdlespring", 1)
+        rm.AddIngredient(llrs, "differential-girdlespring", 50)
+    end
+
+    if mods["ThemTharHills"] then
+        rm.AddProduct("astral-acid-recovery", "chemical-waste", 150)
+    end
+
+    if data.raw.recipe["brimstuff-oxygen"] then
+        tm.AddUnlock("ll-luna-automation", "brimstuff-oxygen")
+    end
+
+    rm.AddProduct("ll-red-mud-recovery", "chemical-waste", 25)
+    tm.AddUnlock("ll-quantum-resource-processing", "astral-waste-treatment")
+end
+
 if mods["maraxsis"] then
     if misc.difficulty > 1 then
         rm.AddIngredient("maraxsis-wyrm-confinement-cell", "airtight-seal", 1)
