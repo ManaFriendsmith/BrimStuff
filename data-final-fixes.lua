@@ -14,7 +14,7 @@ if misc.difficulty > 1 then
             icon_size = 64
         },
         {
-            icon = "__BrimStuff__/graphics/icons/toluene.png",
+            icon = "__BrimStuffMk2__/graphics/icons/toluene.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}

@@ -5,7 +5,7 @@ data:extend({
     {
         type = "technology",
         name = "rubber",
-        icon = "__BrimStuff__/graphics/technology/rubber.png",
+        icon = "__BrimStuffMk2__/graphics/technology/rubber.png",
         icon_size = 256,
         effects = {
             {
@@ -25,7 +25,7 @@ data:extend({
     {
         type = "technology",
         name = "electric-chemical-plant",
-        icon = "__BrimStuff__/graphics/technology/electric-chemical-plant.png",
+        icon = "__BrimStuffMk2__/graphics/technology/electric-chemical-plant.png",
         icon_size = 256,
         effects = {
             {
@@ -46,7 +46,7 @@ data:extend({
     {
         type = "technology",
         name = "byproduct-disposal",
-        icon = "__BrimStuff__/graphics/technology/byproduct-disposal.png",
+        icon = "__BrimStuffMk2__/graphics/technology/byproduct-disposal.png",
         icon_size = 256,
         effects = {
             {
@@ -89,7 +89,7 @@ else
         {
             type = "technology",
             name = "basic-chemistry",
-            icon = "__BrimStuff__/graphics/technology/basic-chemistry.png",
+            icon = "__BrimStuffMk2__/graphics/technology/basic-chemistry.png",
             icon_size = 256,
             effects = {
                 {
@@ -139,7 +139,7 @@ if mods["space-age"] then
             name = "chemical-waste-leaching",
             icons = {
                 {
-                    icon = "__BrimStuff__/graphics/technology/chemical-waste-leaching.png",
+                    icon = "__BrimStuffMk2__/graphics/technology/chemical-waste-leaching.png",
                     icon_size = 256
                 }
             },
@@ -171,7 +171,7 @@ if mods["space-age"] then
                     icon_size = 64
                 },
                 {
-                    icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
                     icon_size = 64,
                     scale = 1,
                     shift = {-24, 24}
@@ -383,13 +383,13 @@ if mods["space-age"] then
         }
     })
 
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         tm.AddUnlock("electroponics", "metalcelium-pyroponics")
     end
 
     if misc.difficulty == 3 then
         tm.AddUnlock("hydroponics", "growth-serum", "-yumako-hydroponics")
-        if mods["IfNickel"] then
+        if mods["IfNickelMk2"] then
             tm.AddUnlock("hydroponics", "bacterium-extraction-from-sludge")
             tm.AddUnlock("hydroponics", "mutagenic-sludge-quelling")
         end
@@ -431,7 +431,7 @@ if misc.difficulty > 1 then
         {
             type = "technology",
             name = "toluene-production",
-            icon = "__BrimStuff__/graphics/technology/toluene-production.png",
+            icon = "__BrimStuffMk2__/graphics/technology/toluene-production.png",
             icon_size = 256,
             effects = {
                 {
@@ -520,12 +520,12 @@ if misc.difficulty > 1 then
     end
 end
 
-if misc.difficulty == 3 and mods["IfNickel"] and mods["space-age"] then
+if misc.difficulty == 3 and mods["IfNickelMk2"] and mods["space-age"] then
     data:extend({
         {
             type = "technology",
             name = "advanced-sludge-handling",
-            icon = "__BrimStuff__/graphics/technology/advanced-sludge-handling.png",
+            icon = "__BrimStuffMk2__/graphics/technology/advanced-sludge-handling.png",
             icon_size = 256,
             effects = {
                 {

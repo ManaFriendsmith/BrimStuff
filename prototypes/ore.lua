@@ -39,7 +39,7 @@ data:extend({
     {
       sheet =
       {
-        filename = "__BrimStuff__/graphics/ore/sulfur-ore.png",
+        filename = "__BrimStuffMk2__/graphics/ore/sulfur-ore.png",
         priority = "extra-high",
         size = 128,
         frame_count = 8,

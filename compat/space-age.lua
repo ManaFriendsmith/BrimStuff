@@ -81,7 +81,7 @@ tm.SetTechnologyTrigger("byproduct-disposal", "recycler")
 
 if misc.difficulty > 1 then
     rm.AddProduct("scrap-recycling", {type="item", name="drive-belt", amount=1, probability=0.06})
-    if misc.difficulty == 3 and mods["LasingAround"] then
+    if misc.difficulty == 3 and mods["LasingAroundMk2"] then
         rm.AddProduct("custom-weird-alien-gizmo-recycling", {type="item", name="differential-girdlespring", amount=1, probability=0.01})
         rm.AddProduct("custom-weird-alien-gizmo-recycling", {type="item", name="spring", amount=1, probability=0.1})
         rm.AddIngredient("cardinal-grammeter", "differential-girdlespring", 1)
@@ -178,7 +178,7 @@ rm.RemoveIngredient("wood-processing", "wood", 1)
 data.raw.plant["tree-plant"].growth_ticks = 60 * 60 * 2
 
 if misc.difficulty == 3 then
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         rm.AddIngredient("bacterium-extraction-from-sludge", "growth-serum", 5)
         tm.AddUnlock("tissue-cultivation", "growth-serum", "-bacterium-extraction-from-sludge")
     end
@@ -209,7 +209,7 @@ rm.AddProduct("biosulfur", "chemical-waste", 40)
 rm.AddProduct("biolubricant", "chemical-waste", 10)
 rm.AddProduct("carbon-fiber", "chemical-waste", 40)
 
-if mods["IfNickel"] and misc.difficulty > 1 then
+if mods["IfNickelMk2"] and misc.difficulty > 1 then
     rm.AddProduct("stem-cells", "chemical-waste", 20)
 end
 
@@ -229,7 +229,7 @@ if misc.difficulty == 3 then
     if not data.raw.item["self-regulating-valve"] then
         rm.AddIngredient("cryogenic-plant", "differential-girdlespring", 10)
     end    
-    rm.AddProduct("fluoroketone-cooling", "chemical-waste", mods["IfNickel"] and 20 or 2)
+    rm.AddProduct("fluoroketone-cooling", "chemical-waste", mods["IfNickelMk2"] and 20 or 2)
 
     --this is an old in-joke that I will not explain.
     rm.AddIngredient("ai-girlfriend", "explosives", 1)

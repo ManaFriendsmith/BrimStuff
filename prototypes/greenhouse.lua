@@ -9,7 +9,7 @@ local gh = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machin
 
 gh.name = "brimstuff-greenhouse"
 gh.order = "ca"
-gh.icon = "__BrimStuff__/graphics/icons/brimstuff-greenhouse.png"
+gh.icon = "__BrimStuffMk2__/graphics/icons/brimstuff-greenhouse.png"
 gh.icon_size = 64
 gh.icon_mipmaps = 4
 gh.remnants = "lab_remnants"
@@ -52,7 +52,7 @@ gh.graphics_set.animation = {
       layers =
       {
         {
-          filename = "__BrimStuff__/graphics/entity/greenhouse2.png",
+          filename = "__BrimStuffMk2__/graphics/entity/greenhouse2.png",
           width = 194,
           height = 174,
           frame_count = 1,
@@ -90,7 +90,7 @@ gh.graphics_set.animation = {
 local blah = {
   fadeout = true,
   animation = {
-    filename = "__BrimStuff__/graphics/entity/greenhouse2.png",
+    filename = "__BrimStuffMk2__/graphics/entity/greenhouse2.png",
     width = 194,
     height = 174,
     frame_count = 33,
@@ -106,7 +106,7 @@ gh.graphics_set.working_visualisations = {
     fadeout = true,
     apply_recipe_tint = "primary",
     animation = {
-      filename = "__BrimStuff__/graphics/entity/greenhouse-light2.png",
+      filename = "__BrimStuffMk2__/graphics/entity/greenhouse-light2.png",
       blend_mode = "additive",
       draw_as_glow = true,
       width = 216,
@@ -171,7 +171,7 @@ data:extend({
   {
     type = "fluid",
     name = "fertilizer-slurry",
-    icon = "__BrimStuff__/graphics/icons/fertilizer-slurry.png",
+    icon = "__BrimStuffMk2__/graphics/icons/fertilizer-slurry.png",
     icon_size = 64,
     subgroup = "fluid",
     order = "q",
@@ -183,7 +183,7 @@ data:extend({
   {
     type = "item",
     name = "brimstuff-greenhouse",
-    icon = "__BrimStuff__/graphics/icons/brimstuff-greenhouse.png",
+    icon = "__BrimStuffMk2__/graphics/icons/brimstuff-greenhouse.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = mods["space-age"] and "agriculture" or "production-machine",
@@ -272,7 +272,7 @@ data:extend({
       name = "brimstuff-greenhouse",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/brimstuff-greenhouse.png",
+          icon = "__BrimStuffMk2__/graphics/icons/brimstuff-greenhouse.png",
           icon_size = 64,
           icon_mipmaps = 4
         }

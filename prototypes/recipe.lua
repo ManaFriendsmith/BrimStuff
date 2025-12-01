@@ -37,7 +37,7 @@ if mods["Paracelsin"] then
                 name = "paracelsian-synthetic-toluene",
                 icons = {
                     {
-                        icon = "__BrimStuff__/graphics/icons/toluene.png",
+                        icon = "__BrimStuffMk2__/graphics/icons/toluene.png",
                         icon_size = 64
                     },
                     {
@@ -158,12 +158,12 @@ data:extend({
         name = "simple-nitric-acid",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/nitric-acid.png",
+            icon = "__BrimStuffMk2__/graphics/icons/nitric-acid.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
           {
-            icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+            icon = "__BrimStuffMk2__/graphics/icons/potassium-nitrate.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}
@@ -194,7 +194,7 @@ data:extend({
         name = "chemical-waste-incineration",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           }
@@ -225,7 +225,7 @@ data:extend({
         name = "chemical-waste-reprocessing",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
@@ -266,12 +266,12 @@ data:extend({
         name = "potassium-nitrate-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
           {
-            icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+            icon = "__BrimStuffMk2__/graphics/icons/potassium-nitrate.png",
             icon_size = 64,
             icon_mipmaps = 4,
             scale = 0.33
@@ -305,7 +305,7 @@ data:extend({
         name = data.raw.item["carbon-black"] and "carbon-black-disposal" or "coal-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
@@ -344,7 +344,7 @@ data:extend({
         name = "sulfur-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
@@ -502,7 +502,7 @@ if mods["space-age"] then
                     icon_size = 64
                 },
                 {
-                    icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/potassium-nitrate.png",
                     icon_size = 64,
                     scale = 0.5
                 }
@@ -537,7 +537,7 @@ if mods["space-age"] then
                     icon_size = 64
                 },
                 {
-                    icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
                     icon_size = 64,
                     scale = 0.25,
                     shift = {-6, 6}
@@ -570,7 +570,7 @@ if mods["space-age"] then
             category = "organic-or-basic-chemistry",
             icons = {
                 {
-                    icon = "__BrimStuff__/graphics/icons/rubber.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/rubber.png",
                     icon_size = 64
                 },
                 {
@@ -606,12 +606,12 @@ if mods["space-age"] then
             category = "chemistry",
             icons = {
                 {
-                    icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
                     icon_size = 64,
                     icon_mipmaps = 4,
                 },
                 {
-                    icon = "__BrimStuff__/graphics/icons/nitric-acid.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/nitric-acid.png",
                     icon_size = 64,
                     icon_mipmaps = 4,
                     scale = 0.25,
@@ -642,7 +642,7 @@ if mods["space-age"] then
             name = "fertilizer-slurry-from-nutrients",
             icons = {
                 {
-                    icon = "__BrimStuff__/graphics/icons/fertilizer-slurry.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/fertilizer-slurry.png",
                     icon_size = 64
                 },
                 {
@@ -960,7 +960,7 @@ if mods["space-age"] then
             name = "solid-fuel-disposal",
             icons = {
               {
-                icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+                icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
                 icon_size = 64,
                 icon_mipmaps = 4,
               },
@@ -996,7 +996,7 @@ if mods["space-age"] then
         }
     })
 
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         data:extend({
             {
                 type = "recipe",
@@ -1030,12 +1030,12 @@ if mods["space-age"] then
     end
 
 
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         rm.RemoveProduct("chemical-waste-leaching", "coal", 2)
         rm.AddProduct("chemical-waste-leaching", "zinc-ore", 2)
     end
 
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         rm.RemoveProduct("chemical-waste-leaching", "iron-ore", 1)
         rm.RemoveProduct("chemical-waste-leaching", "copper-ore", 1)
         rm.AddProduct("chemical-waste-leaching", "nickel-ore", 2)
@@ -1048,7 +1048,7 @@ if mods["space-age"] then
                 name = "rubber-gunpowder",
                 icons = {
                     {
-                        icon = "__BrimStuff__/graphics/icons/rubber.png",
+                        icon = "__BrimStuffMk2__/graphics/icons/rubber.png",
                         icon_size = 64
                     },
                     {
@@ -1093,12 +1093,12 @@ if mods["space-age"] then
                 name = "gunpowder-disposal",
                 icons = {
                 {
-                    icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
                     icon_size = 64,
                     icon_mipmaps = 4,
                 },
                 {
-                    icon = misc.difficulty == 1 and "__castra__/graphics/icons/gunpowder.png" or "__BrimStuff__/graphics/icons/gunpowder.png",
+                    icon = misc.difficulty == 1 and "__castra__/graphics/icons/gunpowder.png" or "__BrimStuffMk2__/graphics/icons/gunpowder.png",
                     icon_size = 64,
                     icon_mipmaps = 4,
                     scale = 0.33
@@ -1138,7 +1138,7 @@ if mods["LunarLandings"] then
         name = "astral-waste-treatment",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
@@ -1289,7 +1289,7 @@ data:extend({
         name = "toluene-from-wood",
         icons = {
             {
-                icon = "__BrimStuff__/graphics/icons/toluene.png",
+                icon = "__BrimStuffMk2__/graphics/icons/toluene.png",
                 icon_size = 64
             },
             {
@@ -1324,7 +1324,7 @@ data:extend({
         name = "toluene-from-coal",
         icons = {
             {
-                icon = "__BrimStuff__/graphics/icons/toluene.png",
+                icon = "__BrimStuffMk2__/graphics/icons/toluene.png",
                 icon_size = 64
             },
             {
@@ -1393,12 +1393,12 @@ data:extend({
         name = "toluene-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuffMk2__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
           {
-            icon = "__BrimStuff__/graphics/icons/toluene.png",
+            icon = "__BrimStuffMk2__/graphics/icons/toluene.png",
             icon_size = 64,
             icon_mipmaps = 4,
             scale = 0.33
@@ -1495,7 +1495,7 @@ if mods["space-age"] then
     })
 
     rm.ReplaceIngredientProportional("synthetic-rubber", "carbon", "toluene", 0.33)
-    data.raw.recipe["synthetic-rubber"].icons[2].icon = "__BrimStuff__/graphics/icons/toluene.png"
+    data.raw.recipe["synthetic-rubber"].icons[2].icon = "__BrimStuffMk2__/graphics/icons/toluene.png"
 else
     data:extend({
         {
@@ -1504,11 +1504,11 @@ else
             category = "chemistry",
             icons = {
                 {
-                    icon = "__BrimStuff__/graphics/icons/rubber.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/rubber.png",
                     icon_size = 64
                 },
                 {
-                    icon = "__BrimStuff__/graphics/icons/toluene.png",
+                    icon = "__BrimStuffMk2__/graphics/icons/toluene.png",
                     icon_size = 64,
                     scale = 0.25,
                     shift = {-8, -8}
@@ -1638,13 +1638,13 @@ if mods["space-age"] then
     rm.ReplaceIngredientProportional("metalcelium-electroponics-with-scrap", "fertilizer-slurry", "growth-serum", 0.1)
     rm.ReplaceIngredientProportional("tungstool-crossbreeding", "fertilizer-slurry", "growth-serum", 0.1)
 
-    if mods["IfNickel"] then
+    if mods["IfNickelMk2"] then
         data:extend({
             {
                 type = "recipe",
                 name = "sludge-synthesis",
                 category = "organic",
-                icon = "__BrimStuff__/graphics/icons/sludge-synthesis.png",
+                icon = "__BrimStuffMk2__/graphics/icons/sludge-synthesis.png",
                 icon_size = 64,
                 subgroup = "original-dint",
                 order = "w",
@@ -1670,7 +1670,7 @@ if mods["space-age"] then
                 type = "recipe",
                 name = "toxin-extraction",
                 category = "organic",
-                icon = "__BrimStuff__/graphics/icons/toxin-extraction.png",
+                icon = "__BrimStuffMk2__/graphics/icons/toxin-extraction.png",
                 icon_size = 64,
                 subgroup = "original-dint",
                 order = "x",

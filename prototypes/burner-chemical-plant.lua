@@ -60,7 +60,7 @@ bcp.graphics_set.animation = {
   layers =
   {
     {
-      filename = "__BrimStuff__/graphics/entity/burnerchem.png",
+      filename = "__BrimStuffMk2__/graphics/entity/burnerchem.png",
       priority = "high",
       width = 116,
       height = 93,
@@ -69,7 +69,7 @@ bcp.graphics_set.animation = {
       shift = util.by_pixel(10.5, 3)
     },
     {
-      filename = "__BrimStuff__/graphics/entity/burnerchem_shadow.png",
+      filename = "__BrimStuffMk2__/graphics/entity/burnerchem_shadow.png",
       priority = "high",
       width = 116,
       height = 93,

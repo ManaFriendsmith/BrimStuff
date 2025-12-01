@@ -19,7 +19,7 @@ rm.AddProduct("sulfur", "chemical-waste", 20)
 tm.RemoveUnlock("sulfur-processing", "sulfur")
 tm.AddUnlock("advanced-oil-processing", "sulfur")
 
-if mods["IfNickel"] then
+if mods["IfNickelMk2"] then
     tm.AddPrerequisite("high-pressure-valve", "rubber")
     if misc.difficulty == 1 then
         rm.AddIngredient("high-pressure-valve", "rubber", 2)
@@ -73,11 +73,11 @@ if misc.difficulty > 1 then
     rm.AddIngredient("nitric-acid-rocket-fuel", "airtight-seal", 1)
 end
 
-if mods["BrassTacks"] and misc.difficulty == 3 then
+if mods["BrassTacksMk2"] and misc.difficulty == 3 then
     rm.AddProduct("depleted-zinc-salt-reprocessing", "chemical-waste", 25)
 end
 
-if mods["ThemTharHills"] and misc.difficulty > 1 then
+if mods["ThemTharHillsMk2"] and misc.difficulty > 1 then
     rm.ReplaceIngredientProportional("heavy-cable", "plastic-bar", "rubber")
 end
 
@@ -117,7 +117,7 @@ if data.raw.item["differential-girdlespring"] then
     else
         tm.AddUnlock("electric-engine", "differential-girdlespring")
         if not data.raw.technology["mechanical-engineering"] then
-            data.raw.technology["electric-engine"].icon = "__BrimStuff__/graphics/technology/mechanical-engineering.png"
+            data.raw.technology["electric-engine"].icon = "__BrimStuffMk2__/graphics/technology/mechanical-engineering.png"
             data.raw.technology["electric-engine"].localised_name = {"technology-name.mechanical-engineering"}
             data.raw.technology["electric-engine"].localised_description = {"technology-description.mechanical-engineering"}
         end
@@ -128,12 +128,12 @@ if data.raw.item["differential-girdlespring"] then
     end
 end
 
-if misc.difficulty == 3 and mods["BrassTacks"] then
+if misc.difficulty == 3 and mods["BrassTacksMk2"] then
     --nitinol takes priority
     rm.ReplaceIngredientProportional("complex-joint", "galvanized-rod", "spring", 0.5)
 end
 
-if misc.difficulty > 1 and mods["IfNickel"] then
+if misc.difficulty > 1 and mods["IfNickelMk2"] then
     --complex joint takes priority
     rm.ReplaceIngredientProportional("gimbaled-rocket-engine", "iron-gear-wheel", "spring", 1)
     if misc.difficulty == 3 then
@@ -141,7 +141,7 @@ if misc.difficulty > 1 and mods["IfNickel"] then
     end
 end
 
-if mods["ThemTharHills"] then
+if mods["ThemTharHillsMk2"] then
     rm.AddProduct("depleted-acid-reprocessing", "chemical-waste", 40)
     rm.AddProduct("depleted-acid-reprocessing-with-calcite", "chemical-waste", 500)
 end
@@ -162,14 +162,14 @@ if misc.difficulty > 1 then
     rm.AddIngredient("express-splitter", "drive-belt", 2)
 end
 
-if misc.difficulty == 3 and (not mods["IfNickel"]) then
+if misc.difficulty == 3 and (not mods["IfNickelMk2"]) then
     rm.AddIngredient("fast-splitter", "spring", 4)
     if mods["quality"] then
         rm.AddIngredient("recycler", "spring", 20)
     end
 end
 
-if misc.difficulty == 3 and (not mods["BrassTacks"]) then
+if misc.difficulty == 3 and (not mods["BrassTacksMk2"]) then
     rm.AddIngredient("express-splitter", "spring", 8)
 end
 
@@ -182,7 +182,7 @@ end
 --INSERTERS
 
 if misc.difficulty == 3 then
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         rm.ReplaceIngredientProportional("fast-inserter", "iron-gear-wheel", "spring", 1, 1)
     else
         rm.ReplaceIngredientProportional("fast-inserter", "iron-plate", "spring")
@@ -193,7 +193,7 @@ if misc.difficulty == 3 then
         rm.AddIngredient("stack-inserter", "differential-girdlespring")
     end
 
-    if not mods["IfNickel"] then
+    if not mods["IfNickelMk2"] then
         if rm.GetIngredientCount("bulk-inserter", "iron-gear-wheel") == 0 then
             rm.AddIngredient("bulk-inserter", "spring", 5)
         else
@@ -206,7 +206,7 @@ end
 
 if misc.difficulty > 1 then
     rm.AddIngredient("pump", "airtight-seal", 2)
-    if difficulty == 3 and not mods["IfNickel"] then
+    if difficulty == 3 and not mods["IfNickelMk2"] then
         rm.AddIngredient("pump", "spring", 2)
     end
 else
@@ -230,7 +230,7 @@ end
 
 --RAILWAY
 
-if not mods["IfNickel"] then
+if not mods["IfNickelMk2"] then
     if misc.difficulty > 1 then
         rm.AddIngredient("fluid-wagon", "airtight-seal", 3)
     else
@@ -270,7 +270,7 @@ tm.AddPrerequisite("automation-2", "rubber")
 rm.ReplaceIngredientProportional("chemical-plant", "pipe", "basic-chemical-plant", 0.2)
 rm.ReplaceIngredientProportional("oil-refinery", "pipe", "basic-chemical-plant", 0.2)
 
-if not mods["IfNickel"] then
+if not mods["IfNickelMk2"] then
     if misc.difficulty == 1 then
         rm.ReplaceIngredientProportional("chemical-plant", "iron-gear-wheel", "rubber", 2)
         rm.ReplaceIngredientProportional("oil-refinery", "iron-gear-wheel", "rubber", 2)
@@ -302,12 +302,12 @@ if misc.difficulty > 1 then
     end    
 end
 
-if misc.difficulty == 3 and (not mods["IfNickel"]) then
+if misc.difficulty == 3 and (not mods["IfNickelMk2"]) then
     rm.AddIngredient("assembling-machine-2", "spring", 8)
 end
 
 if misc.difficulty == 3 then
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         tm.AddPrerequisite("electroplating", "rubber")
         rm.ReplaceIngredientProportional("electroplating-machine", "pipe", "airtight-seal", 0.5)
     elseif data.raw.item["differential-girdlespring"] then

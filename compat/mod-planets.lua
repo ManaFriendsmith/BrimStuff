@@ -17,7 +17,7 @@ if mods["LunarLandings"] then
         rm.AddIngredient(llrs, "differential-girdlespring", 50)
     end
 
-    if mods["ThemTharHills"] then
+    if mods["ThemTharHillsMk2"] then
         rm.AddProduct("astral-acid-recovery", "chemical-waste", 150)
     end
 
@@ -51,7 +51,7 @@ if mods["Paracelsin"] then
     rm.AddProduct("sphalerite-processing", "chemical-waste", 30)
     rm.AddProduct("tetrahedrite-processing", "chemical-waste", 15)
     rm.AddProduct("zinc-purification", {type="item", name="potassium-nitrate", amount=1, probability=0.05})
-    if not mods["ThemTharHills"] then
+    if not mods["ThemTharHillsMk2"] then
         rm.AddProduct("zinc-leaching", "chemical-waste", 10)
     end
     
@@ -75,7 +75,7 @@ if mods["castra"] then
         rm.AddIngredient("rocket-fuel-sulfur", "airtight-seal")
     end
 
-    if not mods["ThemTharHills"] then
+    if not mods["ThemTharHillsMk2"] then
         rm.AddIngredient("nickel-sulfide-reduction", "nitric-acid", 25)
         rm.AddProduct("nickel-sulfide-reduction", "chemical-waste", 25)
     end
@@ -100,11 +100,11 @@ if mods["castra"] then
     tm.AddUnlock("gunpowder-processing", "rubber-gunpowder")
     tm.AddUnlock("gunpowder-processing", "gunpowder-disposal")
 
-    if mods["BrassTacks"] then
+    if mods["BrassTacksMk2"] then
         rm.AddProduct("custom-ancient-military-wreckage-recycling", {type="item", name="rubber", amount=1, probability=0.1})
     end
 
-    if mods["BrassTacks"] and misc.difficulty == 3 then
+    if mods["BrassTacksMk2"] and misc.difficulty == 3 then
         --makes more sense to do electrolysis in an electroplating machine than a burner chem plant
         rm.AddRecipeCategory("hydrogen-sulfide-electrolysis", "electroplating")
     else

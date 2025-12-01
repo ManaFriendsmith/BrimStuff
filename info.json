@@ -1,10 +1,11 @@
 {
-  "name": "BrimStuff",
+  "name": "BrimStuffMk2",
   "version": "2.0.0",
-  "title": "BrimStuff",
+  "title": "BrimStuff Mk. 2",
   "author": "planetfall",
   "homepage": "",
-  "description": "Adds minable sulfur, burner chemical plant, gunpowder and rubber. Changes how sulfur is obtained from oil. Optionally adds chemical waste reprocessing and greenhouses.",
+  "source": "https://github.com/ManaFriendsmith/BrimStuffMk2",
+  "description": "More Materials: Sulfur, rubber, chemical waste and more.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacks", "? IfNickel", "? ThemTharHills", "? maraxsis", "? Paracelsin", "? castra", "? LunarLandings"]
+  "dependencies": ["base >= 2.0", "pf-functions", "? space-age", "? pf-sa-compat", "~ ZZZ-RecyclerFinalFinal", "? BrassTacksMk2", "? IfNickelMk2", "? ThemTharHillsMk2", "? maraxsis", "? Paracelsin", "? castra", "? LunarLandings"]
 }
