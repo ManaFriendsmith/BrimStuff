@@ -87,6 +87,12 @@ gh.graphics_set.animation = {
       }
     }
 
+if mods["space-age"] then
+  gh.heating_energy = "200kW"
+  gh.graphics_set.frozen_patch = table.deepcopy(data.raw.lab["lab"].frozen_patch)
+  gh.graphics_set.reset_animation_when_frozen = true
+end
+
 local blah = {
   fadeout = true,
   animation = {
