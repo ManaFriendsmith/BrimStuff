@@ -1027,18 +1027,22 @@ if mods["space-age"] then
                 }
             }
         })
+
+        rm.AddIngredient("metalcelium-spore", "nickel-bacteria", 1)
+        rm.AddProduct("metalcelium-spore", "metalcelium-spore", 6)
+
+        rm.RemoveProduct("chemical-waste-leaching", "iron-ore", 1)
+        rm.RemoveProduct("chemical-waste-leaching", "copper-ore", 1)
+        rm.AddProduct("chemical-waste-leaching", "nickel-ore", 2)
     end
 
 
     if mods["BrassTacksMk2"] then
+        rm.AddIngredient("metalcelium-spore", "zinc-bacteria", 1)
+        rm.AddProduct("metalcelium-spore", "metalcelium-spore", mods["IfNickelMk2"] and 9 or 6)
+
         rm.RemoveProduct("chemical-waste-leaching", "coal", 2)
         rm.AddProduct("chemical-waste-leaching", "zinc-ore", 2)
-    end
-
-    if mods["IfNickelMk2"] then
-        rm.RemoveProduct("chemical-waste-leaching", "iron-ore", 1)
-        rm.RemoveProduct("chemical-waste-leaching", "copper-ore", 1)
-        rm.AddProduct("chemical-waste-leaching", "nickel-ore", 2)
     end
 
     if mods["castra"] then
