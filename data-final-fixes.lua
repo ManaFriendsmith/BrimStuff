@@ -26,3 +26,5 @@ if misc.difficulty > 1 then
     rm.ReplaceIngredientProportional(better_plastic_recipe, "carbon-black", "toluene", 1, carbon_amount / 2)
     data:extend({better_plastic_recipe})
 end
+
+require("compat.deadlock")

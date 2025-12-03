@@ -1,0 +1,21 @@
+local misc = require("__pf-functions__/misc.lua")
+
+if deadlock then
+  deadlock.add_stack("potassium-nitrate", "__BrimStuffMk2__/graphics/icons/stacking/potassium-nitrate-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("rubber", "__BrimStuffMk2__/graphics/icons/stacking/rubber-stacked.png", "deadlock-stacking-1", 64)
+  data.raw.item["deadlock-stack-potassium-nitrate"].ib_badge = "KN"
+    if misc.difficulty > 1 then
+        deadlock.add_stack("gunpowder", "__BrimStuffMk2__/graphics/icons/stacking/gunpowder-stacked.png", "deadlock-stacking-2", 64)
+        deadlock.add_stack("toluene", "__BrimStuffMk2__/graphics/icons/stacking/toluene-stacked.png", "deadlock-stacking-2", 64)
+    end
+end
+
+if deadlock_crating then
+  deadlock_crating.add_crate("potassium-nitrate", "deadlock-crating-1")
+  deadlock_crating.add_crate("rubber", "deadlock-crating-1")
+  if misc.difficulty > 1 then
+    deadlock_crating.add_crate("gunpowder", "deadlock-crating-2")
+    deadlock_crating.add_crate("toluene", "deadlock-crating-2")
+  end
+  data.raw.item["deadlock-crate-potassium-nitrate"].ib_badge = "KN"
+end
