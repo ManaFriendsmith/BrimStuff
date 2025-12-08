@@ -19,6 +19,7 @@ if mods["Paracelsin"] then
                     {type="fluid", name="chemical-waste", amount=15}
                 },
                 main_product = "rubber",
+                auto_recycle = false,
                 energy_required = 1,
                 allow_productivity = true,
                 enabled = false,
@@ -59,6 +60,7 @@ if mods["Paracelsin"] then
                     {type="fluid", name="chemical-waste", amount=15}
                 },
                 main_product = "toluene",
+                auto_recycle = false,
                 energy_required = 2,
                 allow_productivity = true,
                 enabled = false,
@@ -77,7 +79,6 @@ data:extend({
     {
         type = "recipe-category",
         name = "basic-chemistry",
-        can_recycle = false
     },
     {
         type = "recipe",
@@ -92,6 +93,7 @@ data:extend({
             {type="fluid", name="chemical-waste", amount=10}
         },
         main_product = "potassium-nitrate",
+        auto_recycle = false,
         energy_required = 1,
         allow_productivity = true,
         enabled = false,
@@ -116,6 +118,7 @@ data:extend({
             {type="fluid", name="chemical-waste", amount=30}
         },
         main_product = "rubber",
+        auto_recycle = false,
         energy_required = 2,
         allow_productivity = true,
         enabled = false,
@@ -143,6 +146,7 @@ data:extend({
             {type="fluid", name="chemical-waste", amount=25}
         },
         main_product = "nitric-acid",
+        auto_recycle = false,
         energy_required = 1,
         enabled = false,
         allow_productivity = true,
@@ -173,6 +177,7 @@ data:extend({
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
         energy_required = 1,
+        auto_recycle = false,
         ingredients = {
             {type="item", name="potassium-nitrate", amount=1},
             {type="fluid", name="water", amount=mods["space-age"] and 10 or 30}
@@ -203,6 +208,7 @@ data:extend({
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
         energy_required = 1,
+        auto_recycle = false,
         ingredients = {
             {type="fluid", name="chemical-waste", amount=200}
         },
@@ -237,6 +243,7 @@ data:extend({
             shift = {8, 8}
           }
         },
+        auto_recycle = false,
         category = "chemistry",
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
@@ -277,6 +284,7 @@ data:extend({
             scale = 0.33
           }
         },
+        auto_recycle = false,
         category = "chemistry",
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
@@ -316,6 +324,7 @@ data:extend({
             scale = 0.33
           }
         },
+        auto_recycle = false,
         category = "chemistry",
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
@@ -355,6 +364,7 @@ data:extend({
             scale = 0.33
           }
         },
+        auto_recycle = false,
         category = "chemistry",
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
@@ -416,6 +426,7 @@ if mods["space-age"] then
                 {type="item", name="spoilage", amount=20},
                 {type="item", name="panspermia-asteroid-chunk", amount=1, probability=0.2}
             },
+            auto_recycle = false,
             energy_required = 2,
             allow_productivity = true,
             allow_decomposition = false,
@@ -437,6 +448,7 @@ if mods["space-age"] then
                 {type="item", name="wood", amount=4},
                 {type="item", name="panspermia-asteroid-chunk", amount=1, probability=0.05}
             },
+            auto_recycle = false,
             energy_required = 5,
             allow_productivity = true,
             allow_decomposition = false,
@@ -456,6 +468,7 @@ if mods["space-age"] then
             results = {
                 --to be computed in pf-sa-compat
             },
+            auto_recycle = false,
             energy_required = 2,
             allow_productivity = true,
             allow_decomposition = false,
@@ -477,6 +490,7 @@ if mods["space-age"] then
                     scale = 0.25
                 }
             },
+            auto_recycle = false,
             subgroup = "agriculture-processes",
             order = "c[nutrients]-c[nutrients-from-spoilage]-alt",
             category = "crafting",
@@ -507,6 +521,7 @@ if mods["space-age"] then
                     scale = 0.5
                 }
             },
+            auto_recycle = false,
             ingredients = {
                 {type="item", name="spoilage", amount=5}
             },
@@ -556,6 +571,7 @@ if mods["space-age"] then
                 {type="fluid", name="chemical-waste", amount=200, fluidbox_multiplier=10},
                 {type="fluid", name="heavy-oil", amount=20},
             },
+            auto_recycle = false,
             energy_required = 10,
             allow_productivity = true,
             enabled = false,
@@ -590,6 +606,7 @@ if mods["space-age"] then
                 {type="fluid", name="chemical-waste", amount=45}
             },
             main_product = "rubber",
+            auto_recycle = false,
             energy_required = 2,
             allow_productivity = true,
             enabled = false,
@@ -627,6 +644,7 @@ if mods["space-age"] then
                 {type="item", name="iron-ore", amount=6},
                 {type="item", name="copper-ore", amount=6}
             },
+            auto_recycle = false,
             energy_required = 20,
             allow_productivity = true,
             enabled = false,
@@ -666,6 +684,7 @@ if mods["space-age"] then
             results = {
                 {type="fluid", name="fertilizer-slurry", amount=100}
             },
+            auto_recycle = false,
             energy_required = 1,
             allow_productivity = true,
             enabled = false
@@ -692,6 +711,7 @@ if mods["space-age"] then
                     max = 2000
                 }
             },
+            auto_recycle = false,
             energy_required = 20,
             allow_productivity = true,
             enabled = false,
@@ -721,6 +741,7 @@ if mods["space-age"] then
                     max = 2000
                 }
             },
+            auto_recycle = false,
             energy_required = 20,
             allow_productivity = true,
             enabled = false,
@@ -778,6 +799,7 @@ if mods["space-age"] then
                     max = 4000
                 }
             },
+            auto_recycle = false,
             energy_required = 6,
             allow_productivity = true,
             enabled = false,
@@ -818,6 +840,7 @@ if mods["space-age"] then
                     max = 4000
                 }
             },
+            auto_recycle = false,
             energy_required = 5,
             allow_productivity = true,
             enabled = false,
@@ -849,6 +872,7 @@ if mods["space-age"] then
                     max = 2000
                 }
             },
+            auto_recycle = false,
             energy_required = 5,
             allow_productivity = true,
             enabled = false
@@ -874,6 +898,7 @@ if mods["space-age"] then
                     min = 99
                 }
             },
+            auto_recycle = false,
             energy_required = 50,
             allow_productivity = true,
             enabled = false,
@@ -918,6 +943,7 @@ if mods["space-age"] then
                     min = 99
                 }
             },
+            auto_recycle = false,
             energy_required = 5,
             allow_productivity = false,
             enabled = false,
@@ -948,6 +974,7 @@ if mods["space-age"] then
                     max = 300
                 }
             },
+            auto_recycle = false,
             energy_required = 5,
             allow_productivity = true,
             enabled = false,
@@ -983,6 +1010,7 @@ if mods["space-age"] then
             results = {
                 {type="fluid", name="chemical-waste", amount=75}
             },
+            auto_recycle = false,
             energy_required = 1,
             allow_productivity = true,
             enabled = false,
@@ -1019,6 +1047,7 @@ if mods["space-age"] then
                         max = 4000
                     }
                 },
+                auto_recycle = false,
                 energy_required = 10,
                 allow_productivity = true,
                 enabled = false,
@@ -1082,6 +1111,7 @@ if mods["space-age"] then
                         max = 1254
                     }
                 },
+                auto_recycle = false,
                 energy_required = 1,
                 allow_productivity = true,
                 enabled = false,
@@ -1120,6 +1150,7 @@ if mods["space-age"] then
                 results = {
                     {type="fluid", name="chemical-waste", amount=75}
                 },
+                auto_recycle = false,
                 energy_required = 1,
                 allow_productivity = true,
                 enabled = false,
@@ -1158,6 +1189,7 @@ if mods["LunarLandings"] then
         order = "c[oil-products]-ca",
         main_product = "",
         enabled = false,
+        auto_recycle = false,
         energy_required = 2,
         allow_decomposition = false,
         allow_productivity = true,
@@ -1278,6 +1310,7 @@ data:extend({
             }
         } or nil,
         main_product = "gunpowder",
+        auto_recycle = false,
         energy_required = 3,
         allow_productivity = true,
         enabled = false,
@@ -1313,6 +1346,7 @@ data:extend({
             {type="fluid", name="chemical-waste", amount=30}
         },
         main_product = "toluene",
+        auto_recycle = false,
         energy_required = 2,
         allow_productivity = true,
         enabled = false,
@@ -1348,6 +1382,7 @@ data:extend({
             {type="fluid", name="chemical-waste", amount=15}
         },
         main_product = "toluene",
+        auto_recycle = false,
         energy_required = 1,
         allow_productivity = true,
         enabled = false,
@@ -1411,6 +1446,7 @@ data:extend({
         category = "chemistry",
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
+        auto_recycle = false,
         energy_required = 1,
         ingredients = {
             {type="fluid", name="nitric-acid", amount=5},
@@ -1456,6 +1492,7 @@ if mods["space-age"] then
                 }
             },
             main_product = "gunpowder",
+            auto_recycle = false,
             energy_required = 3,
             allow_productivity = true,
             enabled = false,
@@ -1489,6 +1526,7 @@ if mods["space-age"] then
                 }
             },
             main_product = "gunpowder",
+            auto_recycle = false,
             energy_required = 10,
             allow_productivity = true,
             enabled = false,
@@ -1528,6 +1566,7 @@ else
                 {type="fluid", name="chemical-waste", amount=45}
             },
             main_product = "rubber",
+            auto_recycle = false,
             energy_required = 2,
             allow_productivity = true,
             enabled = false,
@@ -1611,6 +1650,7 @@ if mods["space-age"] then
                 {type="fluid", name="growth-serum", amount=100},
                 {type="fluid", name="chemical-waste", amount=100}
             },
+            auto_recycle = false,
             main_product = "growth-serum",
             energy_required = 3,
             allow_productivity = true,
@@ -1660,6 +1700,7 @@ if mods["space-age"] then
                 results = {
                     {type="item", name="mutagenic-sludge", amount=1}
                 },
+                auto_recycle = false,
                 energy_required = 8,
                 allow_productivity = true,
                 enabled = false,
@@ -1687,6 +1728,7 @@ if mods["space-age"] then
                     {type="item", name="toluene", amount=1, probability=0.33},
                     {type="item", name="sulfur", amount=1, probability=0.33}
                 },
+                auto_recycle = false,
                 energy_required = 8,
                 allow_productivity = true,
                 enabled = false,

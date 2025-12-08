@@ -82,8 +82,8 @@ tm.SetTechnologyTrigger("byproduct-disposal", "recycler")
 if misc.difficulty > 1 then
     rm.AddProduct("scrap-recycling", {type="item", name="drive-belt", amount=1, probability=0.06})
     if misc.difficulty == 3 and mods["LasingAroundMk2"] then
-        rm.AddProduct("custom-weird-alien-gizmo-recycling", {type="item", name="differential-girdlespring", amount=1, probability=0.01})
-        rm.AddProduct("custom-weird-alien-gizmo-recycling", {type="item", name="spring", amount=1, probability=0.1})
+        rm.AddProduct("weird-alien-gizmo-recycling", {type="item", name="differential-girdlespring", amount=1, probability=0.01})
+        rm.AddProduct("weird-alien-gizmo-recycling", {type="item", name="spring", amount=1, probability=0.1})
         rm.AddIngredient("cardinal-grammeter", "differential-girdlespring", 1)
     end
 else
