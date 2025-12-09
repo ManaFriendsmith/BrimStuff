@@ -101,7 +101,7 @@ if mods["castra"] then
     tm.AddUnlock("gunpowder-processing", "gunpowder-disposal")
 
     if mods["BrassTacksMk2"] then
-        rm.AddProduct("custom-ancient-military-wreckage-recycling", {type="item", name="rubber", amount=1, probability=0.1})
+        rm.AddProduct("ancient-military-wreckage-recycling", {type="item", name="rubber", amount=1, probability=0.1})
     end
 
     if mods["BrassTacksMk2"] and misc.difficulty == 3 then
