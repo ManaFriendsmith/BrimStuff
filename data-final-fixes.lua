@@ -26,10 +26,3 @@ if misc.difficulty > 1 then
     rm.ReplaceIngredientProportional(better_plastic_recipe, "carbon-black", "toluene", 1, carbon_amount / 2)
     data:extend({better_plastic_recipe})
 end
-
-require("compat.deadlock")
-
-if mods["quality"] and misc.last_pf_mod == "BrimStuffMk2" then
-    rm.FixStackingRecycling()
-    require("__quality__/data-updates.lua")
-end
