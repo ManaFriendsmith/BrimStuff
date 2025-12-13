@@ -1,3 +1,6 @@
+local rm = require("__pf-functions__/recipe-manipulation")
+local misc = require("__pf-functions__/misc")
+
 require("compat/vanilla")
 if mods["space-age"] then
     require("compat/space-age")
