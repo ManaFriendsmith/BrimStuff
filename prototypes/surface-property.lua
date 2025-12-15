@@ -32,3 +32,6 @@ end
 if mods["paracelsin"] then
     data.raw.planet["castra"].surface_properties["atmospheric-toxins"] = 21
 end
+if mods["planet-muluna"] then
+    data.raw.planet["muluna"].surface_properties["atmospheric-toxins"] = 3
+end

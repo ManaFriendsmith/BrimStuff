@@ -174,7 +174,7 @@ if mods["space-age"] then
   bcp.surface_conditions = {
     {
       property = "pressure",
-      min = 1
+      min = 51
     }
   }
 end

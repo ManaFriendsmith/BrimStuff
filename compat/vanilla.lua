@@ -131,6 +131,7 @@ end
 if misc.difficulty == 3 and mods["BrassTacksMk2"] then
     --nitinol takes priority
     rm.ReplaceIngredientProportional("complex-joint", "galvanized-rod", "spring", 0.5)
+    rm.ReplaceIngredientProportional("complex-joint-from-carbon", "galvanized-rod", "spring", 0.5)
 end
 
 if misc.difficulty > 1 and mods["IfNickelMk2"] then

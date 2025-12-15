@@ -8,9 +8,15 @@ end
 
 --SPACE PLATFORM
 
-tm.AddUnlock("space-platform-thruster", "panspermia-asteroid-crushing")
-tm.AddUnlock("space-platform-thruster", "spoilage-dessiccation")
-tm.AddUnlock("space-platform-thruster", "gunpowder-in-space")
+if mods["planet-muluna"] then
+    tm.AddUnlock("carbonic-asteroid-crushing", "panspermia-asteroid-crushing")
+    tm.AddUnlock("carbonic-asteroid-crushing", "spoilage-dessiccation")
+    tm.AddUnlock("asteroid-collector", "gunpowder-in-space")
+else
+    tm.AddUnlock("space-platform-thruster", "panspermia-asteroid-crushing")
+    tm.AddUnlock("space-platform-thruster", "spoilage-dessiccation")
+    tm.AddUnlock("space-platform-thruster", "gunpowder-in-space")
+end
 
 rm.ReplaceIngredientProportional("thruster-oxidizer", "water", "nitric-acid", 0.5)
 rm.ReplaceIngredientProportional("advanced-thruster-oxidizer", "water", "nitric-acid", 1)
@@ -133,6 +139,8 @@ if misc.difficulty == 3 then
 
     --it turns out that doing this without imports requires a lot of water. okay. i'm not going to change it. i'm going to give you more water.
     rm.AddProduct("ice-melting", "water", 5)
+    rm.AddProduct("advanced-water-melting-atmosphere", "water", 5)
+    rm.AddProduct("advanced-water-melting-oxygen", "water", 5)
 end
 
 --GLEBA
@@ -231,7 +239,7 @@ if misc.difficulty == 3 then
     end    
     rm.AddProduct("fluoroketone-cooling", "chemical-waste", mods["IfNickelMk2"] and 20 or 2)
 
-    if data.raw.item["hydrocoptic-marzelvane"] and #data.raw.recipe["cryogenic-plant"].ingredients > 6 and not mods["maraxsis"] then
+    if data.raw.item["hydrocoptic-marzelvane"] and #data.raw.recipe["cryogenic-plant"].ingredients > 6 and rm.GetIngredientCount("cryogenic-plant", "lithium-plate") > 0 and not mods["maraxsis"] then
         rm.AddIngredient("hydrocoptic-marzelvane", "lithium-plate", 1)
         rm.RemoveIngredient("cryogenic-plant", "lithium-plate", 99999)
     end

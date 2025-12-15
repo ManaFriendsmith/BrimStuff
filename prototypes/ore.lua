@@ -63,3 +63,71 @@ data:extend({
 
 data.raw.planet["nauvis"].map_gen_settings.autoplace_controls["sulfur"] = {}
 data.raw.planet["nauvis"].map_gen_settings.autoplace_settings.entity.settings["sulfur"] = {}
+
+
+if mods["planet-muluna"] then
+  local panspermia_sim = table.deepcopy(data.raw.resource["iron-ore"].factoriopedia_simulation)
+  panspermia_sim.init = string.gsub(panspermia_sim.init, "iron", "panspermia")
+  panspermia_sim.init = string.gsub(panspermia_sim.init, "ore", "meteorite")
+
+  data:extend({
+    {
+      type = "resource",
+      name = "panspermia-meteorite",
+      icon = "__pf-sa-compat__/graphics/icons/panspermia-asteroid-chunk.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      flags = {"placeable-neutral"},
+      order="a-b-x",
+      tree_removal_probability = 0.8,
+      tree_removal_max_distance = 32 * 32,
+      minable =
+      {
+        mining_particle = "panspermia-meteorite-particle",
+        mining_time = 5,
+        result = "panspermia-asteroid-chunk"
+      },
+      walking_sound = data.raw.resource["iron-ore"].walking_sound,
+      collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+      selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+      autoplace = resource_autoplace.resource_autoplace_settings
+      {
+        name = "panspermia-meteorite",
+        order = "a-e",
+        base_density = 6,
+        has_starting_area_placement = true,
+        regular_rq_factor_multiplier = 1.1,
+        starting_rq_factor_multiplier = 1.1,
+        richness_post_multiplier = 0.1,
+        candidate_spot_count = 22
+      },
+      stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
+      stages =
+      {
+        sheet =
+        {
+          filename = "__BrimStuffMk2__/graphics/ore/panspermia-meteorite.png",
+          priority = "extra-high",
+          size = 128,
+          frame_count = 8,
+          variation_count = 8,
+          scale = 0.5
+        }
+      },
+      map_color = {0.1, 0.75, 0.3},
+      mining_visualisation_tint = {r=0.15, g=0.5, b=0.3},
+      factoriopedia_simulation = panspermia_sim
+    },
+    {
+      type = "autoplace-control",
+      category = "resource",
+      name = "panspermia-meteorite",
+      localised_name = {"", "[entity=panspermia-meteorite] ", {"entity-name.panspermia-meteorite"}},
+      richness = true,
+      order = "a-f05"
+    }
+  })
+
+  data.raw.planet["muluna"].map_gen_settings.autoplace_controls["panspermia-meteorite"] = {}
+  data.raw.planet["muluna"].map_gen_settings.autoplace_settings.entity.settings["panspermia-meteorite"] = {}
+end

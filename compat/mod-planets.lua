@@ -116,3 +116,21 @@ if mods["castra"] then
 
     rm.AddProduct("gunpowder-carbon", "potassium-nitrate", 1)
 end
+
+if mods["planet-muluna"] then
+    rm.ReplaceIngredientProportional("sealed-greenhouse", "steel-plate", "brimstuff-greenhouse", 0.5)
+    if misc.difficulty > 1 then
+        rm.ReplaceIngredientProportional("sealed-greenhouse", "pipe", "airtight-seal", 1)
+    end
+
+    rm.AddIngredient("muluna-tree-growth-greenhouse", {type="fluid", name="fertilizer-slurry", amount=50, fluidbox_index=3})
+    rm.AddIngredient("muluna-tree-growth-greenhouse-water-saving", {type="fluid", name="fertilizer-slurry", amount=50, fluidbox_index=3})
+    rm.AddIngredient("muluna-tree-growth-greenhouse-nutrients", {type="fluid", name="fertilizer-slurry", amount=50, fluidbox_index=3})
+    rm.AddIngredient("muluna-tree-growth-greenhouse-water-saving-nutrients", {type="fluid", name="fertilizer-slurry", amount=50, fluidbox_index=3})
+
+    rm.AddProduct("solid-fuel-from-tar", "chemical-waste", 8)
+
+    if misc.difficulty == 3 then
+        rm.AddIngredient("space-chest-muluna", "differential-girdlespring")
+    end
+end

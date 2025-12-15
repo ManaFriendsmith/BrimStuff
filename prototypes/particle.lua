@@ -36,3 +36,10 @@ end
 data:extend({
   createOreParticle("sulfur", "__BrimStuffMk2__/graphics/ore", 4)
 })
+
+
+if mods["planet-muluna"] then
+  data:extend({
+    createOreParticle("panspermia-meteorite", "__BrimStuffMk2__/graphics/ore", 4)
+  })
+end
