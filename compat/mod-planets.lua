@@ -134,3 +134,14 @@ if mods["planet-muluna"] then
         rm.AddIngredient("space-chest-muluna", "differential-girdlespring")
     end
 end
+
+if mods["Cerys-Moon-of-Fulgora"] then
+    if misc.difficulty == 1 then
+        --otherwise a decent amount of rubber from recycling centrifuges
+        --synthetic rubber from vulcanus should still be helpful
+        rm.AddProduct("cerys-nuclear-scrap-recycling", {type="item", name="rubber", amount=1, probability=0.04})
+    end
+
+    tm.RemovePrerequisite("byproduct-disposal", "recycling")
+    tm.AddPrerequisite("byproduct-disposal", "planet-discovery-fulgora")
+end
