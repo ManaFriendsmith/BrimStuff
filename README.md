@@ -34,6 +34,7 @@ According to the Factorio terms of service mods may include assets derived from 
 
 The assets derived from Factorio assets in this mod are:
 - sulfur ore entity and item (derived from uranium ore)
-- sulfur ore particle (derived from some ore particle i don't remember which -_-)
+- sulfur ore particle (derived from stone particle)
 - greenhouse entity and technology icon (derived from lab)
 - chemical plant entity (derived from old beacon)
+- panspermia meteorite entity and particle (derived from iron ore entity and particle)
