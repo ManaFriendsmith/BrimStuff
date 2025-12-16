@@ -97,9 +97,9 @@ if misc.difficulty == 3 then
     rm.AddProduct("light-oil-cracking", {type="item", name="toluene", amount=1, probability=0.05})
 end
 
-tm.AddUnlock("sulfur-processing", "nitric-acid")
+tm.AddUnlock("sulfur-processing", "pf-nitric-acid")
 tm.AddUnlock("sulfur-processing", "chemical-waste-reprocessing")
-tm.RemoveUnlock("gold-processing", "nitric-acid")
+tm.RemoveUnlock("gold-processing", "pf-nitric-acid")
 tm.RemovePrerequisite("sulfur-processing", "oil-processing")
 tm.AddPrerequisite("sulfur-processing", "electric-chemical-plant")
 if misc.starting_planet ~= "vulcanus" then

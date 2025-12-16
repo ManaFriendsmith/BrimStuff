@@ -131,7 +131,7 @@ data:extend({
     },
     {
         type = "recipe",
-        name = "nitric-acid",
+        name = "pf-nitric-acid",
         category = mods["space-age"] and "organic-or-chemistry" or "chemistry",
         subgroup = "fluid-recipes",
         order = "c[oil-products]-ca",
